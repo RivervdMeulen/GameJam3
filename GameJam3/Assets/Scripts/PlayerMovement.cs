@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour {
 		float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
 		translation *= Time.deltaTime;
 		rotation *= Time.deltaTime;
-		transform.Translate(0, 0, translation);
-		transform.Rotate(rotation, 0, 0);
+		transform.Translate(0, 0, -translation);
+		transform.Rotate(0, rotation, 0);
 	}
 }
 
