@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EndPoint : MonoBehaviour
 {
-	private SceneController sceneController;
+	private SceneController sceneController = new SceneController();
 
 	void OnTriggerEnter(Collider other)
 	{
