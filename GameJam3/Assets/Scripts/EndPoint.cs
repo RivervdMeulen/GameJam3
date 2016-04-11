@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
 {
+	private SceneController sceneController;
+
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.CompareTag("player"))
 		{
-			SceneManager.LoadScene ("WinScreen");
+			sceneController.WinGame ();
 		}
 		if(other.CompareTag("AI"))
 		{
-			SceneManager.LoadScene ("LoseScreen");
+			sceneController.LoseGame ();
 		}
 	}
 }
