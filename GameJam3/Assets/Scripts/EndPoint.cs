@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EndPoint : MonoBehaviour
 {
-	private SceneController sceneController = new SceneController();
+	private SceneController sceneController;
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -11,7 +11,7 @@ public class EndPoint : MonoBehaviour
 		{
 			sceneController.WinGame ();
 		}
-		if(other.CompareTag("AI"))
+		if(other.CompareTag("enemy"))
 		{
 			sceneController.LoseGame ();
 		}
