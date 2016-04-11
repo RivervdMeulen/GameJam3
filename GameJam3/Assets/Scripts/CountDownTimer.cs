@@ -13,7 +13,8 @@ public class CountDownTimer : MonoBehaviour
 		{
 			//Hier stopt de game.
 			Time.timeScale = 0;
-			_countDownText.text = "Time left: 00:00:00";
+			_countDownText.text = "Time's up, you lost!";
+			Debug.Log ("You lost!");
 		}
 
 		else
