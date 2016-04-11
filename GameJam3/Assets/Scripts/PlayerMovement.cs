@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 		translation *= Time.deltaTime;
 		rotation *= Time.deltaTime;
 		transform.Translate(0, 0, translation);
-		transform.Rotate(0, rotation, 0);
+		transform.Rotate(rotation, 0, 0);
 	}
 }
 
