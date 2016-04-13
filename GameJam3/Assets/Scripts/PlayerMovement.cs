@@ -13,6 +13,17 @@ public class PlayerMovement : MonoBehaviour {
 		transform.Translate(0, 0, -translation);
 		transform.Rotate(0, rotation, 0);
 	}
+	void OnCollisionStay(Collision other)
+	{
+		if (other.gameObject.tag == "SlowField")
+		{
+			speed = 1f;
+		}
+		else
+		{
+			speed = 10f;
+		}
+	}
 }
 
 
