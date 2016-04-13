@@ -4,7 +4,9 @@ using System.Collections;
 
 public class CountDownTimer : MonoBehaviour
 {
-	[SerializeField] private Text _countDownText;
+	[SerializeField]
+	private Text _countDownText;
+
 	public float timerCount;
 
 	void Update ()
@@ -31,6 +33,6 @@ public class CountDownTimer : MonoBehaviour
 		var seconds = timerCount % 60;
 		var fraction = (timerCount * 100) % 100;
 
-		_countDownText.text = string.Format("Time left: {0:00}:{1:00}:{2:00}", Mathf.Floor(minutes), seconds, fraction); 
+		_countDownText.text = string.Format("{0:00}:{1:00}:{2:00}", Mathf.Floor(minutes), seconds, fraction); 
 	}
 }
